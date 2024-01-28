@@ -1,9 +1,10 @@
+import { Auth0Provider } from "@auth0/auth0-react";
+import { ThemeProvider, createTheme } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App.tsx";
+import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider, createTheme } from "@mui/material";
 
 const appTheme = createTheme({
   palette: {
@@ -19,9 +20,15 @@ const appTheme = createTheme({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={appTheme}>
-      <App />
-    </ThemeProvider>
+    <Auth0Provider
+      domain="dev-y2cpnxrzduhff4xe.us.auth0.com"
+      clientId="4Vgaa10GSIqKET8zlrlv5B17EokGZBVa"
+      authorizationParams={{ redirect_uri: window.location.origin }}
+    >
+      <ThemeProvider theme={appTheme}>
+        <App />
+      </ThemeProvider>
+    </Auth0Provider>
   </React.StrictMode>
 );
 
