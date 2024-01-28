@@ -6,12 +6,20 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Container } from "@mui/material";
 import { PersistentLeftMenu } from "./navigation-components/PersistentLeftMenu";
+import { LoginButton } from "auth-components/LoginButton";
+import LogoutButton from "auth-components/LogoutButton";
+import { UserProfile } from "auth-components/UserProfile";
 
 function App() {
   return (
-    <Container sx={{}}>
-      <PersistentLeftMenu />
-    </Container>
+    <React.Fragment>
+      <LoginButton />
+      <LogoutButton />
+      <UserProfile />
+      <Container>
+        <PersistentLeftMenu />
+      </Container>
+    </React.Fragment>
   );
 }
 
