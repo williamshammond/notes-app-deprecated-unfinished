@@ -16,9 +16,7 @@ function App() {
       <LoginButton />
       <LogoutButton />
       <UserProfile />
-      <Container>
-        <PersistentLeftMenu />
-      </Container>
+      <PersistentLeftMenu />
     </React.Fragment>
   );
 }
