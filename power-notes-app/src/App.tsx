@@ -9,6 +9,7 @@ import { PersistentLeftMenu } from "./navigation-components/PersistentLeftMenu";
 import { LoginButton } from "auth-components/LoginButton";
 import LogoutButton from "auth-components/LogoutButton";
 import { UserProfile } from "auth-components/UserProfile";
+import { HomePage } from "home-page/HomePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <LogoutButton />
       <UserProfile />
       <PersistentLeftMenu />
+      <HomePage />
     </React.Fragment>
   );
 }
